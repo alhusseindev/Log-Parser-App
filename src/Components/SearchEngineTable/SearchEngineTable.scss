@@ -1,0 +1,84 @@
+@import "../Login/LoginComponent";
+@import "../DataSearchEngine/DataSearchEngine";
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+.search_engine_container{
+  width: 100%;
+  height: 100vh;
+  margin-top: 1rem;
+  background-color: whitesmoke;
+
+}
+
+.search_engine_container .search_engine_container_heading{
+  font-size: 3rem;
+  font-family: "Times New Roman", serif;
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+
+.search_engine_container .search_engine_table{
+  width: 100%;
+
+}
+
+
+
+
+
+
+//////////////////
+
+.data_search_engine_container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.search_box{
+  width: 50%;
+  height: 3.5vh;
+  padding: 0.7rem;
+  border-radius: 15px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background-color: whitesmoke;
+  border-width: 0.05rem;
+  border-style: solid;
+  text-align: center;
+}
+
+.search_engine_heading{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+
+.search_box::placeholder{
+  text-align: center;
+}
+
+.search_btn{
+  @include button_formatting;
+  height: 8%;
+  margin-bottom: 1rem;
+}
+
+
+.search_btn:hover {
+  background-color: darkgray;
+}

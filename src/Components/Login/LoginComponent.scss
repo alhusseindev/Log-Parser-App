@@ -1,0 +1,120 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin form_field_formatting(){
+  width: 50%;
+  height: 3.5vh;
+  padding: 0.7rem;
+  border-radius: 15px;
+  border: 0;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+@mixin button_formatting(){
+  width: 30%;
+  height: 2.5rem;
+  border: 0;
+  border-radius: 9px;
+  cursor: pointer;
+  background-color: dimgray;
+}
+
+@mixin flex_layout_formatting(){
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  padding: 1rem;
+}
+
+@mixin label_formatting(){
+  font-family: "Arial", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+
+.main_app{
+  height: 100vh;
+  background-color: #e7e7e7;
+  @include flex_layout_formatting;
+}
+
+
+.form_container{
+  margin-top: 1rem;
+  height: 100%;
+  //background-color: red;
+  @include flex_layout_formatting;
+}
+
+.form_container .form_header_text{
+  font-size: 0.5rem;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+}
+
+
+.form_container .email_label{
+  @include label_formatting;
+}
+
+.form_container .password_label{
+  @include label_formatting;
+}
+
+.form_container .email_field{
+  @include form_field_formatting;
+}
+
+.form_container .email_field::placeholder{
+  text-align: center;
+}
+
+.form_container .password_field{
+  @include form_field_formatting;
+}
+
+.form_container .password_field::placeholder{
+  text-align: center;
+}
+
+.generate_passcode_button{
+  @include button_formatting;
+  margin-bottom: 1rem;
+}
+
+.generate_passcode_button:hover{
+  background-color: darkgray;
+}
+
+.confirm_credentials_button{
+  @include button_formatting;
+}
+
+.confirm_credentials_button:hover{
+  background-color: darkgray;
+}
+
+
+.horizontal_separator{
+  width: 50%;
+  margin-top: 1rem;
+}
+
+
+.error_message_container{
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+
+
