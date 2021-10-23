@@ -2,8 +2,9 @@ FROM node
 EXPOSE 3000
 WORKDIR ./data-logging-app
 ENV SKIP_PREFLIGHT_CHECK=true
-COPY package*.json . 
+COPY package*.json .
 COPY . .
 RUN yarn install
 RUN yarn run build
 CMD ["yarn", "start"]
+

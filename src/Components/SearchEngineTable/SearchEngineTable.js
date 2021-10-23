@@ -70,13 +70,21 @@ class SearchEngineTable extends React.Component{
             let results = await axios.post("http://ec2-18-117-130-40.us-east-2.compute.amazonaws.com/parser/search", {logDateTime:mydataToSearch});
 
             //this.setState({dataToSearch:});
+            if(results.data.length === 0){
+                this.setState({errorMessage: "No Results Found!"});
+            }else{
+                this.state.searchResults.map((srItem, srIndex) => {
 
-            this.state.searchResults.map((srItem, srIndex) => {
+                    this.setState({searchResults: results.data});
 
-                this.setState({searchResults: results.data});
+                    //console.log("state: ",this.state.searchResults);
+                });
 
-                console.log("state: ",this.state.searchResults);
-            });
+            }
+
+
+
+
 
         }catch(error){
             this.setState({errorMessage: `${error}`});
