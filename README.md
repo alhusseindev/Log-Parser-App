@@ -1,4 +1,4 @@
-# Nuspire FrontEnd App.
+# Log Parser App.
 
 
 ## Developed with:
